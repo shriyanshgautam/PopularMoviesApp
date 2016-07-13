@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/sort_type"
+        android:title="TOP RATED"
+        android:icon="@drawable/ic_star_rate_white_18dp"
+        android:visible="true"
+        app:showAsAction="always"
+        />
+</menu>
