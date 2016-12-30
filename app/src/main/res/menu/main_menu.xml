@@ -8,4 +8,11 @@
         android:visible="true"
         app:showAsAction="always"
         />
+
+    <item android:id="@+id/favorite"
+        android:title="TOP RATED"
+        android:icon="@drawable/ic_favorite_white_24dp"
+        android:visible="true"
+        app:showAsAction="always"
+        />
 </menu>

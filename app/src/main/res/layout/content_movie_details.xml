@@ -47,33 +47,52 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
                     android:text="@string/releasing"/>
                 <TextView
                     android:id="@+id/release_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_large"
-                    android:textColor="@color/colorPrimary"
+
                     android:paddingTop="@dimen/content_padding"
                     />
                 <TextView
                     android:paddingTop="@dimen/body_padding"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
                     android:text="@string/rating"/>
                 <TextView
                     android:id="@+id/rating"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_large"
-                    android:textColor="@color/colorPrimary"
                     android:paddingTop="@dimen/content_padding"
                     />
+                <ImageView
+                    android:id="@+id/favorite"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_favorite_border_black_24dp"/>
+
 
             </LinearLayout>
 
 
         </LinearLayout>
+
+        <TextView
+            android:paddingTop="@dimen/body_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/overview"/>
 
         <TextView
             android:id="@+id/overview"
@@ -83,7 +102,39 @@
 
             />
 
+        <TextView
+            android:paddingTop="@dimen/body_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/trailer"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/trailer_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:paddingTop="@dimen/body_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/review"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/review_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
     </LinearLayout>
+
+
 
 
 </android.support.v4.widget.NestedScrollView>

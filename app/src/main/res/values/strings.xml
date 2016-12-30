@@ -7,4 +7,8 @@
     <string name="title_popular">Movies : Popular</string>
     <string name="title_top_rated">Movies : Top Rated</string>
     <string name="rating_out_of">%1$.2f / 10</string>
+    <string name="review">Reviews</string>
+    <string name="trailer">Trailers</string>
+    <string name="overview">Overview</string>
+    <string name="title_activity_favorites">Favorites</string>
 </resources>

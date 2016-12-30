@@ -1,5 +1,6 @@
 package com.shriyans.popularmovies.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -33,6 +34,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 public class MainActivity extends AppCompatActivity {
     RequestQueue requestQueue;
@@ -45,7 +47,11 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout loaderLayout;
     private TextView loaderTextView;
 
+    public static String SHARED_PREFERENCE_KEY = "shared_preferences";
+    public static String SHDPFS_FAVORITE_MOVIES = "favorite_movies";
+
     //Intent Constants
+    public static String MOVIE_ID = "id";
     public static String MOVIE_TITLE = "title";
     public static String MOVIE_OVERVIEW = "overview";
     public static String MOVIE_POSTER_PATH = "poster_path";
@@ -98,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
                     item.setIcon(R.drawable.ic_star_rate_white_18dp);
                 }
                 break;
+            case R.id.favorite:
+                startActivity(new Intent(MainActivity.this,Favorites.class));
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -112,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-
+                        Log.d("Response",response);
                         try {
 
                             if(sortType==POPULAR_MOVIES){

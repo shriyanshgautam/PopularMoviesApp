@@ -26,6 +26,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.shriyans.popularmovies.activities.MainActivity" />
         </activity>
+        <activity android:name=".activities.Favorites"
+            android:label="@string/title_activity_favorites"
+            android:parentActivityName=".activities.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shriyans.popularmovies.activities.MainActivity" />></activity>
     </application>
 
 </manifest>

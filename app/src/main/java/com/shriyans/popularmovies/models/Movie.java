@@ -7,14 +7,20 @@ public class Movie {
 
         private String title,posterPath,overview,releaseDate;
         double voteAverage;
+        long id;
 
-        public Movie(String title, String posterPath, String overview,double voteAverage,String releaseDate) {
+        public Movie(long id, String title, String posterPath, String overview,double voteAverage,String releaseDate) {
+            this.id = id;
             this.title = title;
             this.posterPath=posterPath;
             this.overview=overview;
             this.voteAverage=voteAverage;
             this.releaseDate=releaseDate;
         }
+
+        public long getId(){ return id;}
+
+        public void setId(long id){this.id = id;}
 
         public String getTitle() {
             return title;
